@@ -58,7 +58,11 @@ app.get('/weather', (req, res) => {
             res.send({
                 location: location,
                 temperature: forecastData.temperature,
-                feelslike: 35,
+                humidity: forecastData.humidity,
+                wind_speed: forecastData.wind_speed,
+                wind_degree: forecastData.wind_degree,
+                wind_dir: forecastData.wind_dir,
+                feelslike: forecastData.feelslike,
                 address: req.query.address,
             })
         })
